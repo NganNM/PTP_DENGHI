@@ -1,0 +1,63 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:form="sap.ui.layout.form"
+	xmlns:mvc="sap.ui.core.mvc"
+>   
+    <Dialog
+        id="idSimulateDialog"
+        title="Thông tin phiếu đề nghị"
+        horizontalScrolling="false"
+        verticalScrolling="false">
+        <content>
+        <form:SimpleForm
+                id="inputHeaderForm"
+                width="auto"
+                class="sapUiResponsiveMargin"
+                layout="ResponsiveGridLayout"
+                editable="true"
+                labelSpanL="3"
+                labelSpanM="3"
+                emptySpanL="4"
+                emptySpanM="4"
+                columnsL="1"
+                columnsM="1" >
+                <form:content>
+
+                    <Label text="Nội dung" />
+                    <Input id="inpNoiDung"/>
+
+                    <Label text="Họ tên người nhận tiền" />
+                    <Input id="inpHoTen"/>
+
+                    <Label text="Tên ngân hàng người nhận tiền" />
+                    <Input id="inpTenNganHang"/>          
+
+                    <Label text="Số tài khoản nhận tiền " />
+                    <Input id="inpSoTaiKhoan"/>               
+
+                    <Label text="Đơn vị công tác" />
+                    <Input id="inpDonViCongTac"/>                  
+
+                    <Label text="Lý do thanh toán" />
+                    <Input id="inpLyDoThanhToan"/>                                
+
+                    <Label text="Hình thức thanh toán" />
+                    <ComboBox id="cbPaymentMethod">
+                        <core:Item key="TM" text="Tiền mặt" />
+                        <core:Item key="CK" text="Chuyển khoản" />
+                    </ComboBox>
+
+                    <Label text="Chứng từ kèm theo" />
+                    <Input id="inpAttach"/>
+
+                    <HBox>
+                        <Button id="btnPrint" press="onPrintDeNghi" text="In chứng từ" class="sapUiSmallMarginEnd sapUiSmallMarginTop" type="Emphasized" ></Button>
+                        <Button id="btnReview" press="onReviewDeNghi" text="Review chứng từ" class="sapUiSmallMarginEnd sapUiSmallMarginTop" ></Button>
+                        <!-- <Button id="btnHuy" press="onCloseInputHeader" text="Huỷ" class="sapUiSmallMarginEnd sapUiSmallMarginTop" ></Button> -->
+                    </HBox>
+                </form:content>
+            </form:SimpleForm>
+        </content>
+    </Dialog>
+</core:FragmentDefinition>

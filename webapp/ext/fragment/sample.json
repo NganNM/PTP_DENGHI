@@ -1,0 +1,28 @@
+@EndUserText.label : 'Đề nghị (thanh toán, tạm ứng)'
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #RESTRICTED
+define table zfi_tb_denghi {
+
+  key client     : abap.clnt not null;
+  key zdenghi    : zde_denghi not null;
+  key gjahr      : gjahr not null;
+  companycode    : bukrs;
+  ctdenghi       : zde_ctdenghi;
+  supplier       : lifnr;
+  customer       : lifnr;
+  pst_user       : zde_pst_user;
+  pst_date       : zde_pst_date;
+  del_user       : zde_del_user;
+  del_date       : zde_del_date;
+  nguoidenghi    : abap.char(60);
+  donvicongtac   : abap.char(80);
+  lydothanhtoan  : abap.char(80);
+  nguoinhan      : abap.char(60);
+  tennganhang    : abap.char(80);
+  sotaikhoannhan : abap.char(20);
+  paymentmethod  : abap.char(2);
+  ctkemtheo      : abap.char(80);
+
+}
